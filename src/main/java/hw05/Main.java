@@ -32,7 +32,7 @@ public class Main {
 		System.out.println(bank);
 		bank.addClient(new Client("Fedor", 35));
 		try {
-			final Account fedor = new Account(bank.availableAccountId() - 1, "Fedor", 50);
+			final Account fedor = new Account(bank.availableAccountId(), "Fedor", 50);
 			bank.addAccount(fedor);
 		}catch (Exception e){
 			System.out.println("Ошибка " + e.getMessage());
@@ -44,6 +44,5 @@ public class Main {
 		}
 		System.out.println();
 		System.out.println(bank);
-
 	}
 }
