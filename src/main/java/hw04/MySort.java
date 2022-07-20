@@ -61,7 +61,11 @@ public class MySort {
 		}
 	}
 
-	private static void printArray(final Integer[] array, final long before, final long after) {
+	private static void printArray(final Integer[] array) {
+
+		System.out.println(Arrays.toString(array));
+
+	}	private static void printArray(final Integer[] array, final long before, final long after) {
 
 		System.out.println(Arrays.toString(array));
 		System.out.println(after - before);
