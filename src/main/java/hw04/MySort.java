@@ -16,12 +16,16 @@ public class MySort {
 
 		final Integer[] choiceSortArray = {1, 0, 6, 11, 3, 7, 4, -1, 3};
 		printArray(choiceSortArray);
+		final long before = System.nanoTime();
 		choiceSort(choiceSortArray);
-		printArray(choiceSortArray);
+		final long after = System.nanoTime();
+		printArray(choiceSortArray, before, after);
 		final Integer[] bubbleSortArray = {1, 0, 6, 11, 3, 7, 4, -1, 3};
 		printArray(bubbleSortArray);
+		final long beforeChoice = System.nanoTime();
 		bubbleSort(bubbleSortArray);
-		printArray(bubbleSortArray);
+		final long afterChoice = System.nanoTime();
+		printArray(bubbleSortArray, beforeChoice, afterChoice);
 	}
 
 	private static void bubbleSort(final Integer[] array) {
@@ -57,9 +61,10 @@ public class MySort {
 		}
 	}
 
-	private static void printArray(final Integer[] array) {
+	private static void printArray(final Integer[] array, final long before, final long after) {
 
 		System.out.println(Arrays.toString(array));
+		System.out.println(after - before);
 	}
 
 	private static long forIterable(final int count){
