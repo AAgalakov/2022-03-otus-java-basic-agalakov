@@ -1,10 +1,18 @@
 package hw04;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class MySort {
 
 	public static void main(final String[] args) {
+
+		System.out.printf("forIterable(10) -> %d\n", forIterable(10));
+		System.out.printf("forIterable(10_000_000) -> %d\n", forIterable(10_000_000));
+
+		System.out.printf("streamIterable(10) -> %d\n", streamIterable(10));
+		System.out.printf("streamIterable(10_000_000) -> %d\n\n", streamIterable(10_000_000));
+
 
 		final Integer[] choiceSortArray = {1, 0, 6, 11, 3, 7, 4, -1, 3};
 		printArray(choiceSortArray);
@@ -53,14 +61,30 @@ public class MySort {
 		}
 	}
 
-	private static void printArray(final Integer[] array) {
-
-		System.out.println(Arrays.toString(array));
-	}
-
 	private static void printArray(final Integer[] array, final long before, final long after) {
 
 		System.out.println(Arrays.toString(array));
 		System.out.println(after - before);
+	}
+
+	private static long forIterable(final int count){
+
+		int someVariable = 0;
+		final long before = System.nanoTime();
+		for (int i = 0; i < count; i++){
+			someVariable++;
+		}
+		final long after = System.nanoTime();
+		System.out.println("someVariable -> " + someVariable);
+		return after - before;
+	}
+
+	private static long streamIterable(final int count){
+
+		final long before = System.nanoTime();
+		int someVariable = (int) IntStream.range(0, count).count();
+		final long after = System.nanoTime();
+		System.out.println("someVariable -> " + someVariable);
+		return after - before;
 	}
 }
