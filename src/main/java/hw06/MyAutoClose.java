@@ -9,5 +9,6 @@ public class MyAutoClose implements AutoCloseable {
 	@Override
 	public void close() throws Exception {
 
+		System.out.println("Закрываем ресурс");
 	}
 }
