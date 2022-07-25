@@ -4,14 +4,14 @@ import hw07.game.GameWinnerPrinter;
 import hw07.game.Player;
 
 public class GameWinnerPrinterSpy implements GameWinnerPrinter {
-	private String winnerName;
+	private Player winner;
 	@Override
 	public void printWinner(final Player winner) {
-		winnerName = winner.getName();
+		this.winner = winner;
 	}
 
-	public String getWinnerName() {
+	public Player getWinner() {
 
-		return winnerName;
+		return winner;
 	}
 }
