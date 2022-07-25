@@ -27,3 +27,5 @@ VALUES ('Верный ответ на первый вопрос', 1, true),
        ('Неверный ответ на третий вопрос', 3, false),
        ('Неверный ответ на третий вопрос', 3, false),
        ('Верный ответ на третий вопрос', 3, true);
+
+SELECT * FROM question JOIN answer a ON question.id = a.question_id WHERE correct = TRUE;
