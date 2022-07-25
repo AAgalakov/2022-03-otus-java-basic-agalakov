@@ -11,6 +11,7 @@ public class GameTest {
 	private final Player player1 = new Player("Вася");
 	private Game game;
 
+	@SuppressWarnings("ObjectEquality")
 	public void testWinnerPlayer2() {
 
 		final DiceImplSpy dice = new DiceImplSpy(3, false);
@@ -18,7 +19,7 @@ public class GameTest {
 		game = new Game(dice, winnerPrinter);
 
 		game.playGame(player1, player2);
-		if (winnerPrinter.getWinnerName().equals(player2.getName())) {
+		if (winnerPrinter.getWinner().equals(player2)) {
 			System.out.println("Тест c определением победителя пройден");
 		} else {
 			System.err.println("Тест c определением победителя провален");
@@ -33,7 +34,7 @@ public class GameTest {
 		game = new Game(dice, winnerPrinter);
 
 		game.playGame(player1, player2);
-		if (!winnerPrinter.getWinnerName().equals(player1.getName())) {
+		if (!winnerPrinter.getWinner().equals(player1)) {
 			System.out.println("Тест c определением проигравшего пройден");
 		} else {
 			System.err.println("Тест c определением проигравшего провален");
@@ -58,6 +59,6 @@ public class GameTest {
 
 	private boolean isNotWinner(final GameWinnerPrinterSpy winnerPrinter) {
 
-		return !winnerPrinter.getWinnerName().equals(player1.getName()) && !winnerPrinter.getWinnerName().equals(player2.getName());
+		return !winnerPrinter.getWinner().equals(player1.getName()) && !winnerPrinter.getWinner().equals(player2.getName());
 	}
 }
