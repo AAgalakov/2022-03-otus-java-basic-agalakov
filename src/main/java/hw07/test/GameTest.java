@@ -19,7 +19,7 @@ public class GameTest {
 		game = new Game(dice, winnerPrinter);
 
 		game.playGame(player1, player2);
-		if (winnerPrinter.getWinner().equals(player2)) {
+		if (winnerPrinter.getWinner() == player2) {
 			System.out.println("Тест c определением победителя пройден");
 		} else {
 			System.err.println("Тест c определением победителя провален");
@@ -34,7 +34,7 @@ public class GameTest {
 		game = new Game(dice, winnerPrinter);
 
 		game.playGame(player1, player2);
-		if (!winnerPrinter.getWinner().equals(player1)) {
+		if (winnerPrinter.getWinner() != player1) {
 			System.out.println("Тест c определением проигравшего пройден");
 		} else {
 			System.err.println("Тест c определением проигравшего провален");
