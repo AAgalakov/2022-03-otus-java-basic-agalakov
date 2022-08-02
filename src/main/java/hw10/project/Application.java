@@ -30,7 +30,7 @@ public class Application {
 			} while (!currencySet.contains(currency));
 			System.out.println("Введите сумму");
 			final int amount = in.nextInt();
-			final String result = printerService.print(currencyMap.get(currency), amount);
+			final String result = printerService.convertToString(currencyMap.get(currency), amount);
 			System.out.println(result);
 		}
 	}

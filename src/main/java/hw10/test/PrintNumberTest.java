@@ -12,66 +12,91 @@ public class PrintNumberTest {
 		fourtyNine();
 		oneHundredTen();
 		hundredTwentyTwo();
+		fourHundred();
 		nineHundredAndNinetyNine();
 	}
 
 	private void hundredTwentyTwo(){
 
-		final String s = printNumber.numberToString(122);
-		if ("сто двадцать два".equals(s)){
-			System.out.println("Тестирование 122 прошло");
+		final int price = 122;
+		final String result = printNumber.numberToString(price);
+		final String test = "сто двадцать два";
+		if (test.equals(result)){
+			System.out.printf("Тестирование %d прошло%n", price);
 		} else {
-			System.err.println("Тестирование 122 не прошло");
+			System.err.printf("Тестирование %d не прошло, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 
 	private void eleven(){
 
-		final String s = printNumber.numberToString(11);
-		if ("одиннадцать".equals(s)){
-			System.out.println("Тестирование 11 прошло");
+		final int price = 11;
+		final String result = printNumber.numberToString(price);
+		final String test = "одиннадцать";
+		if (test.equals(result)){
+			System.out.printf("Тестирование %d прошло%n", price);
 		} else {
-			System.err.println("Тестирование 11 не прошло");
+			System.err.printf("Тестирование %d не прошло, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 
 	private void fourtyNine(){
 
-		final String s = printNumber.numberToString(49);
-		if ("сорок девять".equals(s)){
-			System.out.println("Тестирование 49 прошло");
+		final int price = 49;
+		final String result = printNumber.numberToString(price);
+		final String test = "сорок девять";
+		if (test.equals(result)){
+			System.out.printf("Тестирование %d прошло%n", price);
 		} else {
-			System.err.println("Тестирование 49 не прошло");
+			System.err.printf("Тестирование %d не прошло, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 
 	private void five(){
 
-		final String s = printNumber.numberToString(5);
-		if ("пять".equals(s)){
-			System.out.println("Тестирование 5 прошло");
+		final int price = 5;
+		final String result = printNumber.numberToString(price);
+		final String test = "пять";
+		if (test.equals(result)){
+			System.out.printf("Тестирование %d прошло%n", price);
 		} else {
-			System.err.println("Тестирование 5 не прошло");
+			System.err.printf("Тестирование %d не прошло, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 
 	private void nineHundredAndNinetyNine(){
 
-		final String s = printNumber.numberToString(999);
-		if ("девятьсот девяносто девять".equals(s)){
-			System.out.println("Тестирование 999 прошло");
+		final int price = 999;
+		final String result = printNumber.numberToString(price);
+		final String test = "девятьсот девяносто девять";
+		if (test.equals(result)){
+			System.out.printf("Тестирование %d прошло%n", price);
 		} else {
-			System.err.println("Тестирование 999 не прошло");
+			System.err.printf("Тестирование %d не прошло, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 
 	private void oneHundredTen(){
 
-		final String s = printNumber.numberToString(110);
-		if ("сто десять".equals(s)){
-			System.out.println("Тестирование 110 прошло");
+		final int price = 110;
+		final String result = printNumber.numberToString(price);
+		final String test = "сто десять";
+		if (test.equals(result)){
+			System.out.printf("Тестирование %d прошло%n", price);
 		} else {
-			System.err.println("Тестирование 110 не прошло");
+			System.err.printf("Тестирование %d не прошло, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
+		}
+	}
+
+	private void fourHundred(){
+
+		final int price = 400;
+		final String result = printNumber.numberToString(price);
+		final String test = "четыреста";
+		if (test.equals(result)){
+			System.out.printf("Тестирование %d прошло%n", price);
+		} else {
+			System.err.printf("Тестирование %d не прошло, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 }

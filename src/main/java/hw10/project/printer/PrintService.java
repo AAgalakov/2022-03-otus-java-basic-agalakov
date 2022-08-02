@@ -4,5 +4,5 @@ import hw10.project.currency.Currency;
 
 public interface PrintService {
 
-	String print(final Currency currency, final int amount);
+	String convertToString(final Currency currency, final int amount);
 }

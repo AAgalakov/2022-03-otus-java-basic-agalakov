@@ -21,88 +21,104 @@ public class PrintPriceTest {
 	}
 
 	private void zeroRubles(){
-		final String s = printerCurrencyName.printPrice(rub, 0);
 
-		if (s.contains("рублей")) {
-			System.out.println("Тест с 0 рублями пройден");
+		final int price = 0;
+		final String result = printerCurrencyName.printPrice(rub, price);
+		final String test = "рублей";
+		if (result.contains(test)) {
+			System.out.printf("Тест с %d рублями пройден%n", price);
 		} else {
-			System.err.println("Тест с 0 рублями не пройден");
+			System.err.printf("Тест с %d рублями не пройден, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 	private void oneRubleTest() {
 
-		final String s = printerCurrencyName.printPrice(rub, 1);
+		final int price = 1;
+		final String result = printerCurrencyName.printPrice(rub, price);
+		final String test = "рубль";
 
-		if (s.contains("рубль")) {
-			System.out.println("Тест с 1 рублем пройден");
+		if (result.contains(test)) {
+			System.out.printf("Тест с %d рублями пройден%n", price);
 		} else {
-			System.err.println("Тест с 1 рублем не пройден");
+			System.err.printf("Тест с %d рублями не пройден, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 
 	private void twoRublesTest() {
 
-		final String s = printerCurrencyName.printPrice(rub, 2);
+		final int price = 2;
+		final String result = printerCurrencyName.printPrice(rub, price);
+		final String test = "рубля";
 
-		if (s.contains("рубля")) {
-			System.out.println("Тест с 2 рублями пройден");
+		if (result.contains(test)) {
+			System.out.printf("Тест с %d рублями пройден%n", price);
 		} else {
-			System.err.println("Тест с 2 рублями не пройден");
+			System.err.printf("Тест с %d рублями не пройден, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 
 	private void fiveRublesTest() {
 
-		final String s = printerCurrencyName.printPrice(rub, 5);
+		final int price = 5;
+		final String result = printerCurrencyName.printPrice(rub, price);
+		final String test = "рублей";
 
-		if (s.contains("рублей")) {
-			System.out.println("Тест с 5 рублями пройден");
+		if (result.contains(test)) {
+			System.out.printf("Тест с %d рублями пройден%n", price);
 		} else {
-			System.err.println("Тест с 5 рублями не пройден");
+			System.err.printf("Тест с %d рублями не пройден, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 
 	private void tenRublesTest() {
 
-		final String s = printerCurrencyName.printPrice(rub, 10);
+		final int price = 10;
+		final String result = printerCurrencyName.printPrice(rub, price);
+		final String test = "рублей";
 
-		if (s.contains("рублей")) {
-			System.out.println("Тест с 10 рублями пройден");
+		if (result.contains(test)) {
+			System.out.printf("Тест с %d рублями пройден%n", price);
 		} else {
-			System.err.println("Тест с 10 рублями не пройден");
+			System.err.printf("Тест с %d рублями не пройден, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 
 	private void elevenRublesTest() {
 
-		final String s = printerCurrencyName.printPrice(rub, 11);
+		final int price = 11;
+		final String result = printerCurrencyName.printPrice(rub, price);
+		final String test = "рублей";
 
-		if (s.contains("рублей")) {
-			System.out.println("Тест с 11 рублями пройден");
+		if (result.contains(test)) {
+			System.out.printf("Тест с %d рублями пройден%n", price);
 		} else {
-			System.err.println("Тест с 11 рублями не пройден");
+			System.err.printf("Тест с %d рублями не пройден, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 
 	private void twentyRublesTest() {
 
-		final String s = printerCurrencyName.printPrice(rub, 20);
+		final int price = 20;
+		final String result = printerCurrencyName.printPrice(rub, price);
+		final String test = "рублей";
 
-		if (s.contains("рублей")) {
-			System.out.println("Тест с 20 рублями пройден");
+		if (result.contains(test)) {
+			System.out.printf("Тест с %d рублями пройден%n", price);
 		} else {
-			System.err.println("Тест с 20 рублями не пройден");
+			System.err.printf("Тест с %d рублями не пройден, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 
 	private void twentyOneRublesTest() {
 
-		final String s = printerCurrencyName.printPrice(rub, 21);
+		final int price = 21;
+		final String result = printerCurrencyName.printPrice(rub, price);
+		final String test = "рубль";
 
-		if (s.contains("рубль")) {
-			System.out.println("Тест с 21 рублём пройден");
+		if (result.contains(test)) {
+			System.out.printf("Тест с %d рублями пройден%n", price);
 		} else {
-			System.err.println("Тест с 21 рублём не пройден");
+			System.err.printf("Тест с %d рублями не пройден, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 }

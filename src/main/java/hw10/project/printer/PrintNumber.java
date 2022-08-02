@@ -61,15 +61,21 @@ public class PrintNumber {
 
 		final int hundreds = price / 100;
 		if (hundreds > 0) {
-			stringBuilder.append(hundredsMap.get(hundreds)).append(" ");
+			stringBuilder.append(hundredsMap.get(hundreds));
+			if (price % 100 != 0){
+				stringBuilder.append(" ");
+			}
 		}
 		final int dozens = price / 10 % 10;
 		if (dozens > 1) {
-			stringBuilder.append(dozensMap.get(dozens)).append(" ");
+			stringBuilder.append(dozensMap.get(dozens));
+			if (price % 10 != 0){
+				stringBuilder.append(" ");
+			}
 		}
 		if (dozens == 1) {
 			stringBuilder.append(tenMap.get(price % 100));
-		} else {
+		} else if (price % 100 != 0){
 			stringBuilder.append(unitsMap.get(price % 10));
 		}
 		return stringBuilder.toString();
