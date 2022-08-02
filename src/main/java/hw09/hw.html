@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Домашняя работа</title>
+	<script src="hw.js"></script>
+	<style>
+		.formStyle {
+			border-style: double;
+			border-width: 2px;
+			border-color: blue;
+			padding: 8px;
+			width: 500px;
+			height: 170px;
+		}
+		.formStyle div {
+			margin: 20px;
+		}
+		.formStyle input, select
+		{
+			float: right;
+			width: 300px;
+		}
+	</style>
+</head>
+<body>
+<div class="formStyle">
+	<form name="my">
+		<div>
+			<label for="fioId">Имя студента:</label>
+			<input id="fioId" name="fio" type="text" value="Женя Петров">
+		</div>
+		<div>
+			<label for="datePicker">Дата рождения:</label>
+			<input id="datePicker" name="birthDate" type="date" value="1980-03-03">
+		</div>
+		<div>
+			<label>
+				Пол:
+				<select id="sex" name="sex">
+					<option value="Мужчина" selected>Мужчина</option>
+					<option value="Женщина">Женщина</option>
+				</select>
+			</label>
+		</div>
+		<div>
+			<input type="button" class="ui-button" value="Добавить"
+				   onclick='addField(buildHuman(fio.value, sex.value, birthDate.value))'/>
+		</div>
+	</form>
+</div>
+<table id="resultTable" cellpadding="10" border="1">
+	<h2>
+		Таблица студентов
+	</h2>
+	<thead>
+	<tr>
+		<td width="500">Имя студента</td>
+		<td width="100">Пол</td>
+		<td width="150">Дата рождения</td>
+		<td width="100">Возраст</td>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td colspan="4">&nbsp;</td>
+	</tr>
+	</tbody>
+	<tfoot>
+	<tr>
+		<td colspan="3">Средний возраст</td>
+		<td class="resultAge"></td>
+	</tr>
+	</tfoot>
+</table>
+</body>
+</html>
