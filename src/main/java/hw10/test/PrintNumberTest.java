@@ -1,12 +1,13 @@
 package hw10.test;
 
-import hw10.project.printer.PrintNumber;
+import hw10.project.printer.ConvertNumberToWord;
 
 public class PrintNumberTest {
 
-	private final PrintNumber printNumber = new PrintNumber();
+	private final ConvertNumberToWord convertNumberToWord = new ConvertNumberToWord();
 
-	public void allTetPrintNumbers(){
+	public void allTetPrintNumbers() {
+
 		five();
 		eleven();
 		fourtyNine();
@@ -16,84 +17,84 @@ public class PrintNumberTest {
 		nineHundredAndNinetyNine();
 	}
 
-	private void hundredTwentyTwo(){
+	private void hundredTwentyTwo() {
 
 		final int price = 122;
-		final String result = printNumber.numberToString(price);
+		final String result = convertNumberToWord.numberToString(price);
 		final String test = "сто двадцать два";
-		if (test.equals(result)){
+		if (test.equals(result)) {
 			System.out.printf("Тестирование %d прошло%n", price);
 		} else {
 			System.err.printf("Тестирование %d не прошло, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 
-	private void eleven(){
+	private void eleven() {
 
 		final int price = 11;
-		final String result = printNumber.numberToString(price);
+		final String result = convertNumberToWord.numberToString(price);
 		final String test = "одиннадцать";
-		if (test.equals(result)){
+		if (test.equals(result)) {
 			System.out.printf("Тестирование %d прошло%n", price);
 		} else {
 			System.err.printf("Тестирование %d не прошло, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 
-	private void fourtyNine(){
+	private void fourtyNine() {
 
 		final int price = 49;
-		final String result = printNumber.numberToString(price);
+		final String result = convertNumberToWord.numberToString(price);
 		final String test = "сорок девять";
-		if (test.equals(result)){
+		if (test.equals(result)) {
 			System.out.printf("Тестирование %d прошло%n", price);
 		} else {
 			System.err.printf("Тестирование %d не прошло, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 
-	private void five(){
+	private void five() {
 
 		final int price = 5;
-		final String result = printNumber.numberToString(price);
+		final String result = convertNumberToWord.numberToString(price);
 		final String test = "пять";
-		if (test.equals(result)){
+		if (test.equals(result)) {
 			System.out.printf("Тестирование %d прошло%n", price);
 		} else {
 			System.err.printf("Тестирование %d не прошло, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 
-	private void nineHundredAndNinetyNine(){
+	private void nineHundredAndNinetyNine() {
 
 		final int price = 999;
-		final String result = printNumber.numberToString(price);
+		final String result = convertNumberToWord.numberToString(price);
 		final String test = "девятьсот девяносто девять";
-		if (test.equals(result)){
+		if (test.equals(result)) {
 			System.out.printf("Тестирование %d прошло%n", price);
 		} else {
 			System.err.printf("Тестирование %d не прошло, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 
-	private void oneHundredTen(){
+	private void oneHundredTen() {
 
 		final int price = 110;
-		final String result = printNumber.numberToString(price);
+		final String result = convertNumberToWord.numberToString(price);
 		final String test = "сто десять";
-		if (test.equals(result)){
+		if (test.equals(result)) {
 			System.out.printf("Тестирование %d прошло%n", price);
 		} else {
 			System.err.printf("Тестирование %d не прошло, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
 
-	private void fourHundred(){
+	private void fourHundred() {
 
 		final int price = 400;
-		final String result = printNumber.numberToString(price);
+		final String result = convertNumberToWord.numberToString(price);
 		final String test = "четыреста";
-		if (test.equals(result)){
+		if (test.equals(result)) {
 			System.out.printf("Тестирование %d прошло%n", price);
 		} else {
 			System.err.printf("Тестирование %d не прошло, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);

@@ -1,11 +1,11 @@
 package hw10.test;
 
-import hw10.project.printer.PrinterCurrencyName;
 import hw10.project.currency.Rub;
+import hw10.project.printer.CurrencyNameConverter;
 
 public class PrintPriceTest {
 
-	private final PrinterCurrencyName printerCurrencyName = new PrinterCurrencyName();
+	private final CurrencyNameConverter currencyNameConverter = new CurrencyNameConverter();
 	private final Rub rub = new Rub();
 
 	public void doAllTest() {
@@ -20,10 +20,10 @@ public class PrintPriceTest {
 		twentyOneRublesTest();
 	}
 
-	private void zeroRubles(){
+	private void zeroRubles() {
 
 		final int price = 0;
-		final String result = printerCurrencyName.printPrice(rub, price);
+		final String result = currencyNameConverter.convertCurrencyByAmount(rub, price);
 		final String test = "рублей";
 		if (result.contains(test)) {
 			System.out.printf("Тест с %d рублями пройден%n", price);
@@ -31,10 +31,11 @@ public class PrintPriceTest {
 			System.err.printf("Тест с %d рублями не пройден, ожидалось \"%s\", пришло \"%s\"%n", price, test, result);
 		}
 	}
+
 	private void oneRubleTest() {
 
 		final int price = 1;
-		final String result = printerCurrencyName.printPrice(rub, price);
+		final String result = currencyNameConverter.convertCurrencyByAmount(rub, price);
 		final String test = "рубль";
 
 		if (result.contains(test)) {
@@ -47,7 +48,7 @@ public class PrintPriceTest {
 	private void twoRublesTest() {
 
 		final int price = 2;
-		final String result = printerCurrencyName.printPrice(rub, price);
+		final String result = currencyNameConverter.convertCurrencyByAmount(rub, price);
 		final String test = "рубля";
 
 		if (result.contains(test)) {
@@ -60,7 +61,7 @@ public class PrintPriceTest {
 	private void fiveRublesTest() {
 
 		final int price = 5;
-		final String result = printerCurrencyName.printPrice(rub, price);
+		final String result = currencyNameConverter.convertCurrencyByAmount(rub, price);
 		final String test = "рублей";
 
 		if (result.contains(test)) {
@@ -73,7 +74,7 @@ public class PrintPriceTest {
 	private void tenRublesTest() {
 
 		final int price = 10;
-		final String result = printerCurrencyName.printPrice(rub, price);
+		final String result = currencyNameConverter.convertCurrencyByAmount(rub, price);
 		final String test = "рублей";
 
 		if (result.contains(test)) {
@@ -86,7 +87,7 @@ public class PrintPriceTest {
 	private void elevenRublesTest() {
 
 		final int price = 11;
-		final String result = printerCurrencyName.printPrice(rub, price);
+		final String result = currencyNameConverter.convertCurrencyByAmount(rub, price);
 		final String test = "рублей";
 
 		if (result.contains(test)) {
@@ -99,7 +100,7 @@ public class PrintPriceTest {
 	private void twentyRublesTest() {
 
 		final int price = 20;
-		final String result = printerCurrencyName.printPrice(rub, price);
+		final String result = currencyNameConverter.convertCurrencyByAmount(rub, price);
 		final String test = "рублей";
 
 		if (result.contains(test)) {
@@ -112,7 +113,7 @@ public class PrintPriceTest {
 	private void twentyOneRublesTest() {
 
 		final int price = 21;
-		final String result = printerCurrencyName.printPrice(rub, price);
+		final String result = currencyNameConverter.convertCurrencyByAmount(rub, price);
 		final String test = "рубль";
 
 		if (result.contains(test)) {

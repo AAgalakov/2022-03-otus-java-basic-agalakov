@@ -2,7 +2,7 @@ package hw10.project.printer;
 
 import java.util.Map;
 
-public class PrintNumber {
+public class ConvertNumberToWord {
 
 	private final Map<Integer, String> unitsMap = Map.of(
 		1, "один",
@@ -62,20 +62,20 @@ public class PrintNumber {
 		final int hundreds = price / 100;
 		if (hundreds > 0) {
 			stringBuilder.append(hundredsMap.get(hundreds));
-			if (price % 100 != 0){
+			if (price % 100 != 0) {
 				stringBuilder.append(" ");
 			}
 		}
 		final int dozens = price / 10 % 10;
 		if (dozens > 1) {
 			stringBuilder.append(dozensMap.get(dozens));
-			if (price % 10 != 0){
+			if (price % 10 != 0) {
 				stringBuilder.append(" ");
 			}
 		}
 		if (dozens == 1) {
 			stringBuilder.append(tenMap.get(price % 100));
-		} else if (price % 100 != 0){
+		} else if (price % 100 != 0) {
 			stringBuilder.append(unitsMap.get(price % 10));
 		}
 		return stringBuilder.toString();

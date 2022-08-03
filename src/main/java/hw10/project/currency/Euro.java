@@ -2,7 +2,8 @@ package hw10.project.currency;
 
 import java.util.Map;
 
-public class Euro extends Currency{
+public class Euro implements Currency {
+
 	private final Map<Integer, String> integerStringMap;
 
 	public Euro() {

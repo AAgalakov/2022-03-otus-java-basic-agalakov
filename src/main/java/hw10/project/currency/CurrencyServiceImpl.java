@@ -1,25 +1,23 @@
 package hw10.project.currency;
 
+import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class CurrencyServiceImpl implements CurrencyService {
 
 	private final Map<String, Currency> currencyMap;
 
-	public CurrencyServiceImpl() {
+	public CurrencyServiceImpl(final List<Currency> currencies) {
 
-		final Rub rub = new Rub();
-		final Dollar dollar = new Dollar();
-		final Euro euro = new Euro();
-		currencyMap = Map.of(
-			rub.getNameCurrency(), rub,
-			dollar.getNameCurrency(), dollar,
-			euro.getNameCurrency(), euro
-		);
+		currencyMap = currencies.stream()
+			.collect(Collectors.toMap(Currency::getNameCurrency, Function.identity()));
 	}
 
 	@Override
-	public Map<String, Currency> getCurrencyMap() {
-		return currencyMap;
+	public Currency getCurrency(final String currency) {
+
+		return currencyMap.get(currency);
 	}
 }
